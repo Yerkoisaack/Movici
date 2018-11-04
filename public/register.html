@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>MOBICYCLE</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="vendors/iconfonts/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="vendors/css/vendor.bundle.addons.css">
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="images/register.png" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container-scroller">
+        <div class="container-fluid page-body-wrapper full-page-wrapper auth-page">
+            <div class="content-wrapper d-flex align-items-center auth register-bg-1 theme-one">
+                <div class="row w-100">
+                    <div class="col-lg-4 mx-auto">
+                        <h2 class="text-center mb-4">Register</h2>
+                        <div class="auto-form-wrapper">
+                            <form action="#">
+
+                                <div class="form-group" id="divCampo" style="display:none;">
+                                    <div class="input-group ">
+                                        <button class="btn btn-block btn-danger">
+                                      Rellene los campos
+                                    </button>
+
+                                    </div>
+                                </div>
+                                <!------------------------------------ nombre -->
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Nombre Completo" id="Nombre">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">
+                                              <i class="mdi mdi-check-circle-outline"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group" id="divRut" style="display:none;">
+                                    <div class="input-group ">
+                                        <button class="btn btn-block btn-danger">
+                                    Rut no valido
+                                  </button>
+
+                                    </div>
+                                </div>
+                                <!----------------------------------rut -->
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Ingrese sin puntos y con guion ej:18949098-4" id="Rut">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">
+                        <i class="mdi mdi-check-circle-outline"></i>
+                      </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!----------------------------------telefono-->
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Telefono movil" id="Telefono">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">
+                        <i class="mdi mdi-check-circle-outline"></i>
+                      </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group" id="divCorreo" style="display:none;">
+                                    <div class="input-group ">
+                                        <button class="btn btn-block btn-danger">
+                                        Este correo ya fue utilizado
+                                      </button>
+
+                                    </div>
+                                </div>
+                                <!----------------------------------correo electronico-->
+
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Correo electronico" id="Email">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">
+                        <i class="mdi mdi-check-circle-outline"></i>
+                      </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!----------------------------------Contraseña-->
+                                <div class="form-group" id="myDiv" style="display:none;">
+                                    <div class="input-group ">
+                                        <button class="btn btn-block btn-danger">
+                                          La contraseña no coinside
+                                        </button>
+
+                                    </div>
+                                </div>
+                                <!----------------------------------pass-->
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="password" class="form-control" placeholder="Contraseña" id="Contrasena1">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">
+                        <i class="mdi mdi-check-circle-outline"></i>
+                      </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!----------------------------------confirmar pass-->
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="password" class="form-control" placeholder="Confirmar Contraseña" id="Contrasena2">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">
+                        <i class="mdi mdi-check-circle-outline"></i>
+                      </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!------------------------------------>
+                                <div class="form-group d-flex justify-content-center">
+                                    <div class="form-check form-check-flat mt-0">
+                                        <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" checked> Acepta los Terminos y Condiciones
+                    </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-primary submit-btn btn-block" onclick="registrar();">Registrar</button>
+                                </div>
+
+                                <div class="form-group" id="divCreado" style="display:none;">
+                                    <div class="input-group ">
+                                        <button class="btn btn-block btn-success">
+                                      Usuario creado
+                                    </button>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="text-block text-center my-3">
+                                    <span class="text-small font-weight-semibold">Ya estas Resgistrado</span>
+                                    <a href="login.html" class="text-black text-small">Login</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- content-wrapper ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="js/register.js"></script>
+    <script src="vendors/js/vendor.bundle.base.js"></script>
+    <script src="vendors/js/vendor.bundle.addons.js"></script>
+    <!-- endinject -->
+    <!-- inject:js -->
+    <script src="js/off-canvas.js"></script>
+    <script src="js/misc.js"></script>
+    <!-- endinject -->
+</body>
+
+</html>

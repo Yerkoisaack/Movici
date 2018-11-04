@@ -49,19 +49,15 @@ app.get('/usuario', verificaToken, (req, res) => {
 
 
 
-app.post('/usuario', [verificaToken, verificaAdminRole], (req, res) => {
+app.post('/usuario', (req, res) => {
 
-
-    let body = req.body; //extraigo la informacion desde x-www-form-urlencoded
-
-
-    let usuario = new Usuario({
-        nombre: body.nombre,
-        email: body.email,
-        password: bcrypt.hashSync(body.password, 10), //encripto contraseña
-        role: body.role,
-        img: null
-    });
+    let body = req.body;
+    let usuario = new Usuario();
+    usuario.nombre = body.nombre;
+    usuario.email = body.correo;
+    usuario.rut = body.rut;
+    usuario.telefono = body.telefono;
+    usuario.password = bcrypt.hashSync(body.password, 10);
 
     usuario.save((err, usuarioDB) => {
         if (err) {

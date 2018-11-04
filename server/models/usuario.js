@@ -39,6 +39,14 @@ let usuarioSchema = new Schema({ //creo nuevo modelo
     google: {
         type: Boolean,
         default: false
+    },
+    rut: {
+        type: String,
+        required: [true, 'El rut es requerido']
+    },
+    telefono: {
+        type: String,
+        required: [true, 'El telefono es requerido']
     }
 
 });
