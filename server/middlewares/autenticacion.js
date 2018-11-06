@@ -10,12 +10,14 @@ let verificaToken = (req, res, next) => {
 
     jwt.verify(token, process.env.SEED, (err, decoded) => {
         if (err) {
+            console.log("caga");
             return res.status(401).json({
                 ok: false,
                 err
             });
         }
         req.usuario = decoded.usuario;
+        console.log("pasa el midelware");
         next();
     });
 

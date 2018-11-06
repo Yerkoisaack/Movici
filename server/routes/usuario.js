@@ -7,7 +7,15 @@ const _ = require('underscore');
 
 
 
+app.get('/indexxx', verificaToken, (req, res) => {
+    console.log("entra a la pagina");
+    return res.json({
+        ok: true,
+        message: "entra"
+    });
 
+
+});
 
 app.get('/usuario', verificaToken, (req, res) => {
 
